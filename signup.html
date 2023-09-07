@@ -6,6 +6,7 @@
     <title>God's own Country</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -53,7 +54,7 @@
 
   <div class="row bgcolorBlue justify-content-center mb-1 rounded">
     <div class="col-12 px-5">
-      <form class="row g-1 mt-4" action="">
+      <form class="row g-1 mt-4" action="index.html" onsubmit="return sValidate()">
         <div class="col-12">
           <label for="inputUsername4" class="form-label">Username</label>
           <div class=" d-flex">
@@ -70,9 +71,9 @@
           <label for="inputPhone4" class="form-label">Phone Number</label>
           <div class="d-flex">
             <input
-              type="tel"
+              type="text"
               class="form-control rounded-3"
-              id="inputPhone4"
+              id="phone"
             />
           </div>
         </div>
@@ -84,7 +85,7 @@
             <input
               type="email"
               class="form-control rounded-3"
-              id="inputEmail4"
+              id="semail"
             />
           </div>
         </div>
@@ -98,7 +99,7 @@
             <input
               type="password"
               class="form-control rounded-3"
-              id="inputPassword4"
+              id="password1"
             />
           </div>
           <div class="col-11 progress" id="progress" hidden= true>
@@ -116,10 +117,16 @@
             <input
               type="password"
               class="form-control rounded-3"
-              id="inputRePassword4"
+              id="password2"
             />
           </div>
         </div>
+
+        <p class="h5">Password Strength :</p>
+                            <div id="typepass">
+                                <div id="strengthResult">
+                                </div>
+                              </div>
         <!-- END OF Retype PASSWORD INPUT -->
         <!-- <div class="col-12">
           <p class="small" id="commonErr">
@@ -170,5 +177,6 @@
 </div>
 <!-- END OF CONTAINER -->
 
+<script src="validation.js"></script>
 </body>
 </html>

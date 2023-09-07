@@ -22,3 +22,9 @@ body{
 .nav-item{
     margin-right: 50px;
 }
+#errorMessages{
+    font-style: italic;
+    font-weight: lighter;
+    font-size: small;
+    color: rgb(89, 1, 1);
+}
